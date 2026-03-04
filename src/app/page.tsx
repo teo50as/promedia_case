@@ -6,6 +6,7 @@ import { FloatingGallery } from "@/components/ui/FloatingGallery";
 import { WhyTechnologies } from "@/components/ui/WhyTechnologies";
 import { ResultsImpact } from "@/components/ui/ResultsImpact";
 import { Testimonials } from "@/components/ui/Testimonials";
+import { AboutUs } from "@/components/ui/AboutUs";
 
 /**
  * Case Study landing page.
@@ -18,7 +19,8 @@ import { Testimonials } from "@/components/ui/Testimonials";
  * 5. WhyTechnologies - justifies key technology choices
  * 6. ResultsImpact - concrete numbers that convince prospects
  * 7. Testimonials - client quotes that build trust
- * 8. Footer - contact CTA
+ * 8. AboutUs - intro to the team
+ * 9. Footer - contact CTA
  */
 export default function Home() {
   return (
@@ -31,6 +33,7 @@ export default function Home() {
       <WhyTechnologies />
       <ResultsImpact />
       <Testimonials />
+      <AboutUs />
 
       {/* Footer with CTA */}
       <footer className="relative py-20 text-center bg-neutral-950 border-t border-neutral-900 overflow-hidden">

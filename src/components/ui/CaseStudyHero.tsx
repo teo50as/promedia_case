@@ -29,7 +29,7 @@ export function CaseStudyHero() {
                     playsInline
                     className="w-full h-full object-cover opacity-55 mix-blend-overlay"
                 >
-                    <source src="/video/hero.mp4" type="video/mp4" />
+                    <source src="/new_hero.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/50 to-neutral-950/20" />
             </div>

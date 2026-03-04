@@ -102,8 +102,8 @@ export function Testimonials() {
                         className="lg:col-span-2 relative rounded-2xl overflow-hidden border border-neutral-800/60 min-h-[400px]"
                     >
                         <Image
-                            src="/images/20250908_203238.jpg"
-                            alt="The ProMediaIT team in the completed broadcast studio control room"
+                            src="/images/mixer.jpg"
+                            alt="Detailed view of the digital audio mixing console"
                             fill
                             className="object-cover"
                             sizes="(max-width: 1024px) 100vw, 40vw"
@@ -111,8 +111,8 @@ export function Testimonials() {
                         {/* Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/20 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-6">
-                            <p className="text-white text-sm font-medium">The Completed Control Room</p>
-                            <p className="text-neutral-400 text-xs mt-1">Where every broadcast comes together</p>
+                            <p className="text-white text-sm font-medium">Precision Control</p>
+                            <p className="text-neutral-400 text-xs mt-1">Every detail engineered for flawless live production</p>
                         </div>
                     </motion.div>
                 </div>
