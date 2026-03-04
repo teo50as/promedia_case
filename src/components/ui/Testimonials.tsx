@@ -13,13 +13,8 @@ interface TestimonialData {
 
 const TESTIMONIALS: TestimonialData[] = [
     {
-        quote: "ProMediaIT transformed our vision into reality. The studio exceeded every expectation - the audio clarity, the seamless switching, everything just works. Our production quality has jumped to a completely different level.",
+        quote: "ProMediaIT transformed our vision into reality. The studio exceeded every expectation - the audio clarity, the seamless switching, everything just works. What impressed us most was the attention to detail, from cable management to thermal design. Four weeks felt ambitious, but they delivered a facility that rivals studios ten times the budget.",
         author: "Studio Director",
-        role: "Broadcasting Client",
-    },
-    {
-        quote: "What impressed us most was the attention to detail - from cable management to thermal design. Four weeks felt ambitious, but they delivered a facility that rivals studios ten times the budget.",
-        author: "Technical Manager",
         role: "Broadcasting Client",
     },
 ];
@@ -31,6 +26,18 @@ const TESTIMONIALS: TestimonialData[] = [
 export function Testimonials() {
     return (
         <section id="testimonials" className="relative py-24 sm:py-32 px-6 sm:px-12 lg:px-24 bg-neutral-950 overflow-hidden">
+            {/* Dimmed studio background photo */}
+            <div className="absolute inset-0 pointer-events-none">
+                <Image
+                    src="/images/IMG-20250908-WA0003.jpeg"
+                    alt=""
+                    fill
+                    className="object-cover opacity-[0.06]"
+                    sizes="100vw"
+                    aria-hidden
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-transparent to-neutral-950" />
+            </div>
             {/* Background glow */}
             <div className="absolute bottom-0 right-1/4 w-[500px] h-[400px] bg-indigo-900/8 blur-[150px] rounded-full pointer-events-none" />
 

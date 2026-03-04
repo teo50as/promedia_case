@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Wifi, Volume2, Tv, Shield } from "lucide-react";
+import Image from "next/image";
 
 /** A single technology choice with rationale. */
 interface TechChoice {
@@ -50,6 +51,18 @@ const TECH_CHOICES: TechChoice[] = [
 export function WhyTechnologies() {
     return (
         <section id="technologies" className="relative py-24 sm:py-32 px-6 sm:px-12 lg:px-24 bg-neutral-950 border-t border-neutral-900 overflow-hidden">
+            {/* Dimmed equipment rack background photo */}
+            <div className="absolute inset-0 pointer-events-none">
+                <Image
+                    src="/images/20250822_213848.jpg"
+                    alt=""
+                    fill
+                    className="object-cover opacity-[0.06]"
+                    sizes="100vw"
+                    aria-hidden
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-transparent to-neutral-950" />
+            </div>
             <div className="max-w-6xl mx-auto relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 /** A single phase in the project timeline. */
 interface TimelinePhase {
@@ -60,6 +61,18 @@ const PHASES: TimelinePhase[] = [
 export function ProjectTimeline() {
     return (
         <section id="timeline" className="relative py-24 sm:py-32 px-6 sm:px-12 lg:px-24 bg-neutral-950 border-t border-neutral-900 overflow-hidden">
+            {/* Dimmed studio background photo */}
+            <div className="absolute inset-0 pointer-events-none">
+                <Image
+                    src="/images/20250908_203806.jpg"
+                    alt=""
+                    fill
+                    className="object-cover opacity-[0.06]"
+                    sizes="100vw"
+                    aria-hidden
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-transparent to-neutral-950" />
+            </div>
             {/* Background glow */}
             <div className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-violet-900/8 blur-[150px] rounded-full pointer-events-none" />
 

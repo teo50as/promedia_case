@@ -56,7 +56,7 @@ function AnimatedStat({
             className="relative group"
         >
             <div className="p-8 rounded-2xl bg-neutral-900/60 border border-neutral-800/60 backdrop-blur-sm
-                hover:border-neutral-700 transition-all duration-500">
+                hover:border-neutral-700 transition-all duration-500 h-full">
                 {/* Icon */}
                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-neutral-950 border border-neutral-800 mb-6">
                     {icon}
@@ -129,10 +129,10 @@ export function ResultsImpact() {
                         delay={0.2}
                     />
                     <AnimatedStat
-                        value={70}
-                        label="Reduced setup time per broadcast compared to previous workflow."
+                        value={100}
+                        label="Audio channels routed over Dante AoIP across the entire facility."
                         icon={<TrendingUp className="w-5 h-5 text-emerald-400" />}
-                        suffix="%"
+                        suffix="+"
                         delay={0.3}
                     />
                 </div>

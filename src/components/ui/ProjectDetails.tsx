@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Target, Lightbulb, Cpu, Clock, CheckCircle2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 /** Technology tags displayed in the sidebar. */
 const TECHNOLOGIES = [
@@ -36,6 +37,18 @@ export function ProjectDetails() {
             id="details"
             className="relative py-32 px-6 sm:px-12 lg:px-24 bg-neutral-950 text-white overflow-hidden border-t border-neutral-900"
         >
+            {/* Dimmed construction phase background photo */}
+            <div className="absolute inset-0 pointer-events-none">
+                <Image
+                    src="/images/20250807_132624.jpg"
+                    alt=""
+                    fill
+                    className="object-cover opacity-[0.06]"
+                    sizes="100vw"
+                    aria-hidden
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-transparent to-neutral-950" />
+            </div>
             {/* Ambient Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-indigo-900/10 blur-[150px] rounded-[100%] pointer-events-none" />
 
