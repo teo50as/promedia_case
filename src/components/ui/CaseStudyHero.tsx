@@ -80,7 +80,7 @@ export function CaseStudyHero() {
                 className="absolute bottom-10 left-6 sm:left-12 lg:left-24 z-10"
             >
                 <a
-                    href="#transformation"
+                    href="#details"
                     className="flex items-center gap-3 text-xs font-semibold tracking-widest text-neutral-500 uppercase hover:text-neutral-300 transition-colors"
                 >
                     <span className="animate-bounce">

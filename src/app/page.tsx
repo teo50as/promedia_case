@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/ui/Navbar";
 import { CaseStudyHero } from "@/components/ui/CaseStudyHero";
-import { SecondaryHero } from "@/components/ui/SecondaryHero";
 import { FloatingGallery } from "@/components/ui/FloatingGallery";
 import { ProjectDetails } from "@/components/ui/ProjectDetails";
 
@@ -9,17 +8,15 @@ import { ProjectDetails } from "@/components/ui/ProjectDetails";
  *
  * Section order is intentional for client readability:
  * 1. Hero - sets the emotional tone (video background)
- * 2. SecondaryHero - shows the transformation journey
- * 3. ProjectDetails - explains the challenge, approach, and outcome
- * 4. FloatingGallery - visual proof of work, ends on the strongest images
- * 5. Footer - contact CTA
+ * 2. ProjectDetails - explains the challenge, approach, and outcome
+ * 3. FloatingGallery - visual proof of work, ends on the strongest images
+ * 4. Footer - contact CTA
  */
 export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
       <Navbar />
       <CaseStudyHero />
-      <SecondaryHero />
       <ProjectDetails />
       <FloatingGallery />
 
