@@ -1,16 +1,24 @@
 import { Navbar } from "@/components/ui/Navbar";
 import { CaseStudyHero } from "@/components/ui/CaseStudyHero";
-import { FloatingGallery } from "@/components/ui/FloatingGallery";
 import { ProjectDetails } from "@/components/ui/ProjectDetails";
+import { ProjectTimeline } from "@/components/ui/ProjectTimeline";
+import { FloatingGallery } from "@/components/ui/FloatingGallery";
+import { WhyTechnologies } from "@/components/ui/WhyTechnologies";
+import { ResultsImpact } from "@/components/ui/ResultsImpact";
+import { Testimonials } from "@/components/ui/Testimonials";
 
 /**
  * Case Study landing page.
  *
- * Section order is intentional for client readability:
+ * Section order is intentional for client persuasion:
  * 1. Hero - sets the emotional tone (video background)
  * 2. ProjectDetails - explains the challenge, approach, and outcome
- * 3. FloatingGallery - visual proof of work, ends on the strongest images
- * 4. Footer - contact CTA
+ * 3. ProjectTimeline - 4-week build plan infographic
+ * 4. FloatingGallery - visual proof of work by phase
+ * 5. WhyTechnologies - justifies key technology choices
+ * 6. ResultsImpact - concrete numbers that convince prospects
+ * 7. Testimonials - client quotes that build trust
+ * 8. Footer - contact CTA
  */
 export default function Home() {
   return (
@@ -18,7 +26,11 @@ export default function Home() {
       <Navbar />
       <CaseStudyHero />
       <ProjectDetails />
+      <ProjectTimeline />
       <FloatingGallery />
+      <WhyTechnologies />
+      <ResultsImpact />
+      <Testimonials />
 
       {/* Footer with CTA */}
       <footer className="relative py-20 text-center bg-neutral-950 border-t border-neutral-900 overflow-hidden">
