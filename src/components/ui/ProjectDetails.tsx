@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Target, Lightbulb, Cpu, Clock, CheckCircle2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
 
 /** Technology tags displayed in the sidebar. */
 const TECHNOLOGIES = [
@@ -16,6 +17,41 @@ const TECHNOLOGIES = [
     "Live Switching",
     "Structured Cabling",
 ] as const;
+
+/** A single phase in the project timeline. */
+interface TimelinePhase {
+    week: string;
+    title: string;
+    tasks: string[];
+    color: string;
+}
+
+const PHASES: TimelinePhase[] = [
+    {
+        week: "Week 1",
+        title: "Site Prep",
+        tasks: ["Demolition & Acoustics", "HVAC Routing", "Power Distribution"],
+        color: "from-blue-500 to-blue-600",
+    },
+    {
+        week: "Week 2",
+        title: "Infrastructure",
+        tasks: ["Structured Cabling", "Equipment Racks", "Overhead Grid"],
+        color: "from-indigo-500 to-indigo-600",
+    },
+    {
+        week: "Week 3",
+        title: "Integration",
+        tasks: ["Dante Network", "NDI Video Routing", "PTZ Programming"],
+        color: "from-violet-500 to-violet-600",
+    },
+    {
+        week: "Week 4",
+        title: "Handover",
+        tasks: ["Signal Flow Testing", "Color Calibration", "Client Training"],
+        color: "from-emerald-500 to-emerald-600",
+    },
+];
 
 /** Props for each detail card in the Bento grid. */
 interface DetailCardProps {
@@ -89,6 +125,14 @@ export function ProjectDetails() {
                                     ))}
                                 </div>
                             </div>
+
+                            {/* Before/After Slider inside Sidebar */}
+                            <div className="mt-12 hidden lg:block">
+                                <BeforeAfterSlider />
+                            </div>
+                            <div className="mt-12 lg:hidden max-w-md mx-auto">
+                                <BeforeAfterSlider />
+                            </div>
                         </motion.div>
                     </div>
 
@@ -127,24 +171,47 @@ export function ProjectDetails() {
                                 }
                             />
                         </div>
-                        <DetailCard
-                            delay={0.4}
-                            icon={<Clock className="w-5 h-5 text-blue-400" />}
-                            title="Timeline"
-                            content={
-                                <span className="text-3xl font-medium text-white block mt-2">
-                                    4 Weeks
-                                </span>
-                            }
-                            className="bg-neutral-900/50"
-                        />
-                        <DetailCard
-                            delay={0.5}
-                            icon={<CheckCircle2 className="w-5 h-5 text-emerald-500" />}
-                            title="The Outcome"
-                            content="A rock-solid, broadcast-ready studio that transformed how the client produces content - cutting setup time significantly."
-                            isHighlight
-                        />
+                        {/* Compact Timeline Card */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                            className="sm:col-span-2 p-8 rounded-3xl bg-neutral-900/80 border border-neutral-800/80 backdrop-blur-sm relative overflow-hidden group"
+                        >
+                            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_0%,transparent_100%)] pointer-events-none" />
+                            <div className="relative z-10 flex items-center gap-4 mb-6">
+                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-neutral-950 border border-neutral-800 shrink-0">
+                                    <Clock className="w-5 h-5 text-blue-400" />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-medium text-neutral-200">4-Week Build Plan</h3>
+                                    <p className="text-sm text-neutral-400">From empty shell to broadcast-ready</p>
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+                                {PHASES.map((phase, idx) => (
+                                    <div key={phase.week} className="flex flex-col">
+                                        <div className="flex items-center gap-2 mb-3">
+                                            <span className={`text-[10px] font-bold tracking-widest uppercase bg-gradient-to-r ${phase.color} bg-clip-text text-transparent`}>
+                                                {phase.week}
+                                            </span>
+                                            <div className="h-px flex-1 bg-neutral-800" />
+                                        </div>
+                                        <h4 className="text-sm font-medium text-neutral-300 mb-2">{phase.title}</h4>
+                                        <ul className="space-y-1.5 flex-1">
+                                            {phase.tasks.map(task => (
+                                                <li key={task} className="flex items-start gap-2 text-neutral-500 text-xs leading-relaxed">
+                                                    <div className="w-1 h-1 rounded-full bg-neutral-700 mt-1.5 shrink-0" />
+                                                    {task}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
                     </div>
 
                 </div>
