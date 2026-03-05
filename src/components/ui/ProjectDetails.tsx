@@ -158,6 +158,7 @@ export function ProjectDetails() {
                                 content={
                                     <ul className="space-y-4 mt-2">
                                         {[
+                                            "Vizrt TriCaster for centralized live switching and graphics",
                                             "Professional Digital Audio Mixing Console (Allen & Heath QU-16)",
                                             "Custom-built 19″ equipment racks with intelligent thermal management",
                                             "SDI / NDI video distribution and matrix switching infrastructure",

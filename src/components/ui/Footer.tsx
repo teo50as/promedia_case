@@ -10,7 +10,7 @@ import Image from "next/image";
  */
 export function Footer() {
     return (
-        <footer className="relative bg-neutral-950 border-t border-neutral-900 overflow-hidden pt-24 pb-12">
+        <footer id="contact" className="relative bg-neutral-950 border-t border-neutral-900 overflow-hidden pt-24 pb-12">
             {/* Ambient Background Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-indigo-900/5 blur-[150px] rounded-full pointer-events-none" />
 
