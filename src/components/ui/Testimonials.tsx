@@ -41,7 +41,7 @@ export function Testimonials() {
             {/* Background glow */}
             <div className="absolute bottom-0 right-1/4 w-[500px] h-[400px] bg-indigo-900/8 blur-[150px] rounded-full pointer-events-none" />
 
-            <div className="max-w-6xl mx-auto relative z-10">
+            <div className="max-w-7xl mx-auto relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

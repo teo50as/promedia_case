@@ -31,7 +31,7 @@ const ITEMS: TechImpactItem[] = [
         icon: <Tv className="w-5 h-5 text-indigo-400" />,
         tech: "NDI Video",
         vs: "SDI-Only Distribution",
-        reason: "Any source to any destination over LAN — no dedicated video cabling per feed.",
+        reason: "Any source to any destination over LAN - no dedicated video cabling per feed.",
         impactValue: 6,
         impactSuffix: " Feeds",
         impactLabel: "Simultaneous live camera feeds with real-time switching and recording.",
@@ -121,7 +121,7 @@ export function TechImpact() {
                 <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-transparent to-neutral-950" />
             </div>
 
-            <div className="max-w-6xl mx-auto relative z-10">
+            <div className="max-w-7xl mx-auto relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -136,7 +136,7 @@ export function TechImpact() {
                         Every choice has a measurable outcome.
                     </h2>
                     <p className="text-neutral-400 text-lg leading-relaxed">
-                        We don&apos;t pick tech for the spec sheet — we pick it for the result it delivers on set.
+                        We don&apos;t pick tech for the spec sheet - we pick it for the result it delivers on set.
                     </p>
                 </motion.div>
 

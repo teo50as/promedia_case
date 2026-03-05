@@ -14,7 +14,7 @@ export function Footer() {
             {/* Ambient Background Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-indigo-900/5 blur-[150px] rounded-full pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
+            <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 relative z-10">
 
                 {/* Unified Bento Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 mb-16">
@@ -35,7 +35,7 @@ export function Footer() {
                         </h2>
                         <div className="space-y-4 text-neutral-400 text-base sm:text-lg leading-relaxed">
                             <p>
-                                At <strong className="text-neutral-200 font-medium">ProMediaIT</strong>, we don&apos;t just plug in cables and hope for the best. We genuinely love building systems that just <em>work</em> — effortlessly and reliably.
+                                At <strong className="text-neutral-200 font-medium">ProMediaIT</strong>, we don&apos;t just plug in cables and hope for the best. We genuinely love building systems that just <em>work</em> - effortlessly and reliably.
                             </p>
                             <p>
                                 Whether it&apos;s a multi-camera broadcast studio, an advanced AoIP network, or a complex corporate AV setup, we approach every project with care, precision, and a bit of geeky enthusiasm.
@@ -55,9 +55,11 @@ export function Footer() {
                             src="/images/us.jpg"
                             alt="The ProMediaIT Team"
                             fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            className="object-cover transition-all duration-700 group-hover:scale-105 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100"
                             sizes="(max-width: 1024px) 100vw, 40vw"
                         />
+                        {/* Dark Overlay */}
+                        <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-700 mix-blend-multiply" />
                         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-transparent to-transparent opacity-80" />
                         <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                             <p className="text-lg text-white font-medium mb-1">The ProMediaIT Team</p>
